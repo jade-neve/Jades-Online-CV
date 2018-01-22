@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>CV</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <style>
+    /*body styling*/
+    body {
+      background-repeat: repeat;
+      background-size: 100%;
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "article article article"
+        "footer footer footer";
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 20% 1fr 15%;
+      height: 100vh;
+      margin: 0;
+    }
+    /*end of body styling*/
+
+    /*entire page positioning*/
+    header, article,footer {
+      padding: 20px;
+    }
+    /*main pageHeader styling*/
+    #pageHeader {
+      grid-area: header;
+      height: 340px;
+      background-color: #eee;
+      background-image: url(file:///C:/Users/Academy15/Desktop/CV/images/outdoor.jpg);
+      background-position: center;
+    }
+
+    /*sidenav stying*/
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    /*side nav anchor styling*/
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+    }
+    /*hovering over side nav bar*/
+    .sidenav a:hover {
+      color: grey;
+    }
+    /*close nav*/
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /*media query used for side nav bar*/
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    /*styling to open sidebar*/
+    .openNav {
+      color: white;
+      font-size: 30px;
+    }
+
+    /*headings for header styling*/
+    .headings {
+      position: relative;
+      text-align: center;
+    }
+
+    /*general heading 1 styling*/
+    h1 {
+      position: relative;
+      font-size: 55px;
+      font-weight: 100;
+      color: black;
+      font-family: 'Fira Sans', sans-serif;
+      margin-top: 20mm;
+    }
+
+    /*class heading 1 styling*/
+    .h1 {
+      border-bottom: 1px solid black;
+    }
+
+    /*image for header*/
+    #img {
+      border-radius: 50%;
+      margin-top: -10mm;
+    }
+
+    /*media query used for responsiveness for pageHeader*/
+    @media (max-width:1000px){
+      #pageHeader {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+
+    /*general heading 2 styling*/
+    h2 {
+      text-align: center;
+      font-size: 25px;
+      font-weight: 100;
+      color: black;
+      font-family: 'Lato', sans-serif;
+    }
+
+    #heading2 {
+      margin-top: 21px;
+    }
+
+    #heading7 {
+      margin-top: -10px;
+    }
+
+    #heading8 {
+      margin-top: -10px;
+    }
+
+    @media(max-width:1000px){
+      #heading7 {
+        width: 100%;
+        margin-top: -10mm;
+        margin-left: 27mm;
+      }
+
+      #heading8 {
+        width: 100%;
+        margin-top: -20mm;
+        margin-left: -35mm;
+      }
+
+    #glen_heading {
+      margin-top: -20px;
+    }
+  }
+
+    @media(max-width:1000px){
+      #heading2 {
+        width: 100%;
+        margin-top: 5%;
+        margin-left: 18mm;
+      }
+
+      #glen_heading {
+        width: 100%;
+        margin-top: 0;
+        margin-left: -18mm;
+      }
+    }
+
+    /*paragraph section for contact info*/
+    .article {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 100;
+      color: white;
+      font-family: 'Fira Sans', sans-serif;
+      margin: 0 auto 29px;
+      width: 800px;
+
+    }
+    /*media query used for paragraphs inorder for it to be centered and responsive*/
+    @media(max-width:900px) {
+      .article {
+        margin: 0%;
+        width: 100%;
+      }
+    }
+
+    /*general heading 4 styling*/
+    h4 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 100;
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    /*Main Article styling for the entire body except for the footer*/
+    #mainArticle {
+      grid-area: article;
+      height: 2050px;
+
+      }
+
+      @media(max-width:1000px) {
+        #mainArticle {
+          width: 100%;
+          height: 2500px;
+        }
+      }
+
+      /*article for about myself styling*/
+      #article {
+        background-color: black;
+        height: 400px;
+        color: white;
+      }
+
+      .heading2 {
+        color: white;
+      }
+
+      /*center paragraph styling for education section, About Myself and Work E*/
+      .center_paragraph {
+        margin-left: 5mm;
+        font-size: 20px;
+        font-weight: 100;
+        color: black;
+        font-family: 'Fira Sans', sans-serif;
+        margin: 0 auto 23px;
+        width: 400px;
+      }
+
+      .middle_paragraph {
+        margin-left: 5mm;
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        font-family: 'Fira Sans', sans-serif;
+        margin: 0 auto 23px;
+        width: 400px;
+      }
+
+      .middle2_paragraph {
+        margin-left: 5mm;
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+        font-family: 'Fira Sans', sans-serif;
+        margin: 0 auto 23px;
+        width: 400px;
+      }
+
+      .center1_paragraph {
+        margin-left: 5mm;
+        font-size: 20px;
+        font-weight: 100;
+        color: black;
+        font-family: 'Fira Sans', sans-serif;
+        margin: 0 auto 23px;
+        width: 400px;
+      }
+
+      @media (max-width:1000px){
+        .center1_paragraph {
+          width: 100%;
+          margin-left: 30mm;
+        }
+      }
+
+      @media (max-width:1000px){
+        .center_paragraph {
+          width: 100%;
+          margin-left:-10mm;
+        }
+
+        .middle_paragraph {
+          width: 100%;
+          margin-left: 20%;
+        }
+
+        .middle2_paragraph {
+          width: 100%;
+          margin-left: -30%;
+        }
+      }
+      /*Glendale Secondary School*/
+      .School_name {
+        color: saddlebrown;
+        font-size: 21px;
+      }
+
+      /*education section*/
+
+      /*Glendale Secondary*/
+      .Glendale {
+        float: left;
+        margin-left: 40mm;
+        color: white;
+      }
+      /*Life Choices Academy*/
+      .LCA {
+        float: right;
+        margin-right: 40mm;
+      }
+      /*overall education styling*/
+      .Education {
+        height: 500px;
+      }
+      /*end of education section*/
+
+      #work {
+        padding-top: 5mm;
+        margin-left: 150mm;
+      }
+
+      @media(max-width:1000px) {
+        #work {
+          padding-top: 10mm;
+        }
+      }
+      /*Work Experience section*/
+
+      .Work_Experience {
+        background-color: black;
+        color: white;
+        height: 500px;
+        margin-top: 5mm;
+      }
+
+      @media (max-width:1000px) {
+        .Work_Experience {
+          width: 100%;
+          margin-top: 30%;
+          height: 700px;
+        }
+      }
+
+      /*Sell Direct Marketing*/
+      .SDM {
+        float: left;
+        margin-left: 40mm;
+        width: 450px;
+        height: 300px;
+        color: white;
+        margin-top: 0mm;
+      }
+
+      .Capita {
+        float: right;
+        margin-right: 30mm;
+        width: 450px;
+        height: 300px;
+        color: white;
+        margin-top: 0mm;
+      }
+      /*end of Work Experience section*/
+      /*Image styling*/
+      .images {
+        margin-left: 38mm;
+        margin-top: 5mm;
+      }
+
+      /*media query image styling*/
+      @media (max-width:1000px){
+        .images{
+          margin: 0%;
+        }
+      }
+
+      /*general heading 3 styling*/
+      h3 {
+        text-align: center;
+        margin-top: 20mm;
+        font-size: 33px;
+        font-weight: 200;
+        font-family: 'Fira Sans', sans-serif;
+      }
+
+      #h3 {
+        text-align: center;
+        margin-top: 20mm;
+        font-size: 33px;
+        font-weight: 200;
+        font-family: 'Fira Sans', sans-serif;
+      }
+
+      @media (max-width:1000px){
+        h3{
+          text-align: center;
+          width: 100%;
+        }
+
+        #h3 {
+          margin-left: 31.8%;
+        }
+      }
+
+      #heading3 {
+        text-align: center;
+        margin-top: 50mm;
+        font-size: 33px;
+        font-weight: 200;
+        font-family: 'Fira Sans', sans-serif;
+        padding-top: 7mm;
+      }
+
+
+
+      .click_paragraph {
+        text-align: center;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+      }
+
+      /*anchor tag styling*/
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      /*anchor tag hover styling*/
+      a:hover {
+        background-color: none;
+        color: grey;
+        transition: 0.2s;
+      }
+
+      /*paragraph*/
+      .text {
+        margin-left: 135mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .row > .column {
+        padding: 0 8px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+        opacity: 0.9;
+        filter: alpha(opacity=90);
+        color: white;
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: black;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+      }
+
+      /* The Close Button */
+      .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .cursor {
+        cursor: pointer
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      img {
+        margin-bottom: -4px;
+      }
+
+      .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+      }
+
+      .demo {
+        opacity: 0.6;
+      }
+
+      .active,
+      .demo:hover {
+        opacity: 1;
+      }
+
+      img.hover-shadow {
+        transition: 0.3s
+      }
+
+      .hover-shadow:hover {
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5), 0 10px 24px 0 rgba(0, 0, 0, 0.19)
+      }
+
+      /*Start of footer*/
+
+      #pageFooter {
+        grid-area: footer;
+        height: 210px;
+        margin-top: 90mm;
+        background-color: black;
+        font-family: 'Fira Sans', sans-serif;
+      }
+
+      /*fle-container styling*/
+      .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        color: white;
+      }
+
+      /*media query for flex-container*/
+      @media (max-width:800px) {
+        .flex-container {
+          width: 100%;
+          margin:0%;
+        }
+      }
+
+      /*styling the div of the fle-container in my footer*/
+      .flex-container>div {
+        text-align: center;
+        width: 430px;
+        margin: 8px;
+        font-size: 12px;
+        color: white;
+      }
+
+      .container {
+        border-right: 1px solid white;
+      }
+      /*end of fel-container styling*/
+
+      /*paragraph section for footer(copyright section)*/
+      .paratext {
+        font-size: 20px;
+        margin-top: 18mm;
+        margin-left: 3mm;
+      }
+
+      .paragraph2 {
+        font-size: 13px;
+        margin-top: 10mm;
+        width: 420px;
+        margin-left: -5mm;
+      }
+
+      /*media query for paragraph section*/
+      @media (max-width:800px) {
+        .paratext {
+          width: 100%;
+          margin: 0%;
+        }
+
+        /*second paragraph*/
+        .paragraph2 {
+          margin: 0%;
+        }
+      }
+      /*end of copyright section */
+
+      /*end of lists*/
+      .logo_icon {
+        margin-top: 3mm;
+        margin-left: -40mm;
+      }
+
+      .logo {
+        float: left;
+        margin-left: 35mm;
+      }
+
+      .logos {
+        margin-left: -4mm;
+        margin-top: 6mm;
+      }
+      /*end of lists*/
+
+      /*paragraph section*/
+
+      /*Last paragraph of footer*/
+      #p2 {
+        width: 150px;
+        margin-left: 35mm;
+        margin-top: 0mm;
+        font-size: 14px;
+      }
+      /*3rd paragraph of footer*/
+      #p3 {
+        margin-right: -7mm;
+        margin-top: 0mm;
+        font-size: 14px;
+      }
+      /*first paragraph of footer*/
+      #p4 {
+        margin-right: -5mm;
+        margin-top: 0mm;
+        font-size: 14px;
+      }
+
+      @media (max-width:500px) {
+        #p2, #p3, #p4 {
+          margin: 0%;
+          width: 100%;
+        }
+      }
+      /*end of paragraph section*/
+
+      #paragraph {
+        width: 300px;
+        margin-left: 12mm;
+        font-size: 20px;
+      }
+
+      @media (max-width:800px) {
+        #paragraph {
+          width: 100%;
+          position: relative;
+          margin: 0%;
+        }
+      }
+      /*end of paragraph section*/
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="pageHeader">
+      <!-- SideNav  -->
+      <!-- Once clicked a sidenav will appear giving jump links for each section of CV -->
+      <div id="mySidenav" class="sidenav">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#article">About Myself</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work Experience</a>
+        <a href="#pageFooter">Contact</a>
+      </div>
+
+      <span class="openNav" onclick="openNav()">&#9776;</span>
+
+      <!-- End of SideNav -->
+
+      <center>
+        <img id="img" src="images/Jade.jpg" width="250" height="300">
+      </center>
+      <!-- Heading -->
+      <div class="headings">
+        <h1><span class="h1">JADE-NEVE BLOWS</span></h1>
+        <h2 id="h2">Junior Front-End Web Developer</h2>
+      </div>
+      <!-- End Of Heading -->
+
+    </header>
+
+    <article id="mainArticle">
+
+      <div id="article">
+        <!-- About Section -->
+        <h3 id="heading3">About Jade</h3>
+        <p class="article">A junior web developer with a strong interest in projects that require conceptual and analytical thinking. Fully committed to designing innovative websites that users will love. Always eager to learn more tricks from anyone regardless of the industry they working in.
+        Well-spoken, confident and the type of person you can rely on.</p>
+
+        <p class="article">A hard worker with high levels of commitment. A fast learner who thrives under pressure.</p>
+        <!-- end of About Section -->
+      </div>
+
+      <!-- Education Section -->
+      <h3 id="education">Education</h3>
+
+      <div class="Education">
+      <div class="Glendale">
+        <!-- Glendale Secondary -->
+        <h2 id="glen_heading">Glendale Seconadry School</h2>
+        <p class="center_paragraph"><span class="School_name">Glendale Secondary School</span>.
+          <p class="center_paragraph">Matriculated: 2015, passed with Bachelors Degree.</p>
+          <p class="center_paragraph">Served as a prefect I held great rapport with peers and teachers.</p>
+          <p class="center_paragraph">I was a diligent leader and role model to younger learners. </p>
+
+      </div>
+
+      <div class="LCA">
+        <!-- Salesians Life Choices -->
+        <h2 id="heading2">Salesians Life Choices Academy</h2>
+        <p class="center1_paragraph">Salesians Life Choices Academy: 2017</p>
+        <p class="center1_paragraph">Web Development (6 months full-time course)</p>
+        <p class="center1_paragraph">The Lifechoices Academy is a full-time program which empowers youth from the Cape Flats with life, practical and professional development skills. We did intensive study of the following web development languages: HTML, CSS, jQuery, JavaScript and Sass. As part of our professional development, we had the opportunity to use online resources such as MOOCs, were taught Design Thinking and made use of resources for personal reflection, such as DISC profiles and SMART goal setting. Taking part in this program has given me the opportunity and made me see life in a different aspect. </p>
+        <!-- End of Education Section -->
+      </div>
+    </div>
+      <!-- Work Section -->
+      <div class="Work_Experience">
+        <h3 id="work">Work Experience</h3>
+          <!-- Sell Direct Marketing -->
+        <div class="SDM">
+          <h2 id="heading7" style="color:white">Sell Direct Marketing</h2>
+          <p class="middle_paragraph"><span class="School_name">Sell Direct Marketing</span>: Sales Representative for 11 months 2016
+          <p class="middle_paragraph">Location: 23 Dreyer Street Claremont 7708</p>
+          <p class="middle_paragraph">I encouraged people to buy mobile devices all over South Africa.</p>
+        </div>
+          <!-- Capita O2 -->
+        <div class="Capita">
+          <h2 id="heading8" style="color:white">Capita O2</h2>
+          <p class="middle2_paragraph">5 months</p>
+          <p class="middle2_paragraph">Customer Service Representative</p>
+          <p class="middle2_paragraph">This position further built on my customer service skills but affirmed the fact that I did not want to be in a call centre on a long-term basis. After doing some research, I came across Life Choices Academy and applied to the program. </p>
+        </div>
+          <!-- End of Work Section -->
+      </div>
+      <div id="sub_article">
+
+        <!-- My skills section with lightbox -->
+        <!-- Once image is clicked explanations will appear -->
+
+        <h3 id="h3">Skills</h3>
+        <p class="click_paragraph">Click on the images below</p>
+        <!-- image container section -->
+        <div class="row">
+          <!-- column section -->
+          <div class="column">
+            <img class="images" src="images/css1.jpg" width="250" height="250" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img class="images" src="images/html2.png" width="250" height="250" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img class="images" src="images/js2.jpg" width="250" height="250" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          </div>
+          <!-- end of column section -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <!-- Slides Section -->
+              <div class="mySlides">
+                <h3>CSS</h3>
+                <p class="article">I enjoy using CSS in all aspects especially when it comes to me having to style my websites. I am creative in many ways when it comes to styling websites especially in projects I receive.</p>
+              </div>
+
+              <div class="mySlides">
+                <h3>HTML</h3>
+                <p class="article">In HTML I've learnt many ways on creating a body for my website as well as ways in which it should be layed out. I grown comfortable with HTML.</p>
+              </div>
+
+              <div class="mySlides">
+                <h3>JAVASCRIPT</h3>
+                <p class="article">I feel that Javascript is a working progress, there are many things that I feel that I can improve on and also do more further reading on Javascript. I found Jquery to be quite helpful and makes me much more comfortable.</p>
+              </div>
+              <!-- End of slides section -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+              <!-- end of image container section -->
+        <!-- end of skills section -->
+
+    </article>
+
+    <!-- Footer Section -->
+    <footer id="pageFooter">
+      <!-- Flex-Container for footer -->
+      <div class="flex-container">
+        <!-- paragraph / copyright section about Jade-Neve Blows -->
+        <div class="container">
+
+          <center>
+            <a href="https://www.linkedin.com/feed/"><img class="logos" src="images/linkedin(2).png" width="125" height="125"></a>
+          </center>
+        </div>
+
+        <div class="container"><p class="paratext">Copyright Jade-Neve Blows © 2017 PRIVACY POLICY</p></div>
+
+        <div>
+          <!-- Contact details -->
+          <p id="paragraph">Contact Details</p>
+          <p id="p4">+27 84 763 0269</p>
+          <p id="p3"><a id="p3" href="https://mail.google.com/mail/u/0/#inbox">blowsjade@gmail.com</a></p>
+          <p id="p2">Mitchell's Plain Cape Town 7785</p>
+        </div>
+
+      </div>
+      <!-- End Of Flex-Container -->
+    </footer>
+    <!-- End of Footer Section -->
+
+    <script type="text/javascript">
+
+    // SideNav
+
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+    </script>
+
+    <script type="text/javascript">
+
+    function openModal() {
+      document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    </script>
+  </body>
+
+</html>
